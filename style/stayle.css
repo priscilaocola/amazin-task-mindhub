@@ -3,10 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+/* **index** */
 /* ----header---- */
 .header {
-    height: 20vh !important;
+    height: 25vh !important;
 }
 .carousel1 {
     height: 100% !important;
@@ -17,34 +17,32 @@ height: 100% !important;
 }
 .carousel-item img {
     width: 100% !important;
-    height: 14rem !important;
+    height: 15rem !important;
     object-fit: cover;
     object-position: center;
 }
-h2 {
-    background-color: rgba(138, 135, 135, 0.486);
+h1 {
+    background-color: rgba(228, 220, 220, 0.633);
     font-size: 45px;
 }
 .nav {
-    height: 15vh !important;
+    height: 10vh !important;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     padding: 1rem;
-    border: 2px solid black;
     background-color: rgb(34, 34, 34);
     position: sticky;
     top: 0;
     width: 100%;
     z-index: 9999;
-    border: 2px solid red; 
 }
 .ancos {
     text-decoration: none;
-    font-size: 15px;
+    font-size: 18px;
     color: black;
     border: 1px solid black;
-    padding: 0.2rem;
-    gap: 1rem;
+    padding: 0.5rem;
     background-color: white;
     border-radius: 5px;
 }
@@ -56,76 +54,161 @@ h2 {
     border-radius: 9px;
     background-color: rgba(255, 255, 255, 0.897);
 }
+.contenedor1{
+    padding: 2rem;
+    flex-wrap: wrap; 
+}
 /* ----main---- */
 .main {
-    min-height: 50vh !important;
-    background-color: aquamarine;
+    min-height: 55vh !important;
+    width: 100%;
     display: flex;
     flex-direction: column;
+    background-color: rgb(211, 218, 215);
 }
 .checkbox {
-    display: flex;
-    padding: 1rem;
-    background-color: blue;
-    border: 2px solid green;
+   align-items: center;
+  padding: 1rem;
+  background-color: dimgrey;
 }
 .cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.7rem;
-    margin-bottom: 1.5rem;
-    margin-top: 1.5rem;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 4rem;   
 }
 .card {
-    width: 16rem;
-    height: 18rem;
+    width: 15rem;
+    height: 20rem;
     padding: 1rem;
     text-align: center;
     object-fit: cover;
-    font-size: 11px;
+    font-size: 12px;
+}
+.input{
+    margin-left: 1rem;
+}
+.input1{
+    width: 20rem;
+    margin-left: 10rem;
 }
 .label{
     background-color: rgba(253, 253, 253, 0.801);border: 2px solid black;
-    font-size: 16px;    
+    font-size: 16px; 
+    margin-left: 1rem;
 }
-
 /*---- footer ----- */
 .vh10 {
     display: flex;
-    flex-direction: column;
+ justify-content: space-between;
     height: 15vh !important;
     background-color: rgb(34, 33, 33);
     color: white;
-    font-size: 15px;
-    text-align: center;
+    align-items: center;
+   padding: 0.2rem;   
+}
+.texto1{
+    font-size: 18px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.iconos{
+    width: 18rem !important;
+    height: 5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.iconoimg{
+    width: 100%;
+    background-color: white;
+    border-radius: 100%;
+    padding: 0.2rem;
+}
+.texto2{
+    width: 3rem;
+    height: 2rem;
 }
 
-@media (min-width: 768px) and (max-width:1440px) {
+@media (min-width: 320px) and (max-width:768px) {
     .nav{
-        height: 10rem !important;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+        height: 12rem !important;
+        flex-direction: column;
+        flex-wrap: wrap;
         padding: 1rem;
     }
     .ancos{
-        font-size: 20px;
+        font-size: 15px;
         padding: 0.5rem;
-        gap: 1rem !important;
+        gap: 2rem !important;
     }
     .logo{
-        width: 15rem !important;
+        width: 8rem !important;
         background-color: white;
+    }
+    .main{
+        flex-direction: column;
+        width: 100%;
     }
     .vh10 {
         height: 8rem !important;
         flex-direction: row !important;
         justify-content: space-between;
         align-items: center;
-        border: 2px solid red;
-
     }
-
-    
+    .input1{
+        width: 10rem;
+        margin-left: 1rem;
+        margin-top: 1rem;
+    }
+    .card {
+        row-gap: 1rem;
+    }
+    .vh10{
+        flex-direction: column;
+        font-size: 12px;
+    }
+    .texto1{
+    font-size: 15px;
+    }
+    .iconos{
+        width: 10rem !important;
+        height: 5rem;
+        display: flex;
+      flex-direction: column;
+        align-items: center;
+    }
+    .texto2{
+        width: 2rem;
+        height: 2rem;
+        gap: 0.5rem;
+    }
+    .cards {
+        margin-bottom: 2rem;
+        gap: 0.5rem;
+    }
+    .carousel-item img{
+        height: 17rem  !important;
+    }
+} 
+/* **contact** */ 
+.contacto{
+    min-height: 40rem !important;
+    padding: 1rem;
+    display: flex;
+justify-content: center;
+align-items: center;
+}
+.datos{
+    height: 30rem;
+    padding: 1rem;  
+}
+.dato1{
+    width: 25rem;
+    height: 2rem;
+}
+.dato2{
+    width: 10rem;
+    text-align: center;
 }
