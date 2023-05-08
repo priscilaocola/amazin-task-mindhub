@@ -1,6 +1,5 @@
 let past = document.getElementById("past-cards");
 
-
 function planoCards(objeto) {
     return ` <div class="card mt-3 mb-3" style="width: 18rem;">
                <img src="${objeto.image}" class="card-img-top object-fit-cover w-100" alt="cine img">
@@ -14,17 +13,7 @@ function planoCards(objeto) {
                   </div>
                   </div>
                   ` ;
-}
-// function filtros(arrayEventos, fecha) {
-//   const eventosFiltrados = [];
-//   for (let objetoEvento of arrayEventos) {
-//       if (objetoEvento.date < fecha) {
-//           eventosFiltrados.push(objetoEvento);
-//       }
-//   }
-//   return eventosFiltrados;
-// }
-// filter(data.events, data.currentDate);
+                }
 const eventosFiltrados = data.events.filter(event=>event.date < data.currentDate);
 
 function printCards(list, lugar){
@@ -34,7 +23,6 @@ function printCards(list, lugar){
 }
 lugar.innerHTML += template
 } 
-
 printCards(eventosFiltrados, past )
 
 

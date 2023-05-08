@@ -1,6 +1,5 @@
 let upcoming = document.getElementById("upcoming-cards");
 
-
 function planoCards(objeto) {
   return `
       <div class="card mt-3 mb-3" style="width: 18rem;">
@@ -16,18 +15,7 @@ function planoCards(objeto) {
       </div>
   `;
 }
-// function filtros(arrayEventos, fecha) {
-//   const eventosFiltrados = [];
-//   for (let objetoEvento of arrayEventos) {
-//       if (objetoEvento.date > fecha) {
-//           eventosFiltrados.push(objetoEvento);
-//       }
-//   }
-//   return eventosFiltrados;
-// }
-// filter(data.events, data.currentDate);
 const eventosFiltrados = data.events.filter(event=>event.date > data.currentDate);
-
 
 function printCards(list, lugar){
   let template = "";
@@ -35,6 +23,5 @@ function printCards(list, lugar){
       template += planoCards (temple)
 }
 lugar.innerHTML  += template
-} 
-    
+}  
 printCards(eventosFiltrados, upcoming )

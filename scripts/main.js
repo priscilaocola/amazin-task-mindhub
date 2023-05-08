@@ -1,7 +1,5 @@
 let cards = document.getElementById("mainCards");
 
-
-
 function planoCard(obj){
     return `<div class="card mt-3 mb-3" style="width: 18rem;">
             <img src=${obj.image} class="card-img-top p-4" alt="food fair">
@@ -13,7 +11,6 @@ function planoCard(obj){
             </div>
             </div> `
 }
-
 function printCards(list, lugar){
     let template = "";
     for(let temple of list){
@@ -21,6 +18,5 @@ function printCards(list, lugar){
 }
 lugar.innerHTML  += template
 } 
-
 printCards(data.events, cards )
 
