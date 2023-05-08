@@ -12,20 +12,36 @@
     <title>Amazing Events</title>
 </head>
 <body>
-    <nav class="nav">
-        <div>
-            <a href="#">
-                <img class="logo" src="../assets/logo.png" alt="logo">
-            </a>
+    <nav class="navbar navbar-expand-md">
+        <div class="container-fluid d-flex justify-content-between px-4 py-2">
+          <a href="#">
+            <img class="logo" src="../assets/logo.png" alt="logo amazing events">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse flex-grow-0 text-center" id="navbarNav">
+            <ul class="navbar-nav align-items-center gap-3">
+              <li class="nav-item">
+                <a class="nav-link" href="../index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./upcomingEvents.html">Upcoming Events</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Past Events</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./contact.html">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./stats.html">Stats</a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="contenedor1">
-            <a class="ancos" href="../index.html" >Home</a>
-            <a class="ancos" href="#" >Upcoming Events</a>
-            <a class="ancos" href="./pastEvents.html">Past Events</a>
-            <a class="ancos" href="./contact.html" >Contact</a>
-            <a class="ancos" href="./stats.html">Stats</a>
-        </div>
-    </nav>
+      </nav>
 
     <header class="header">
         <div id="carouselExampleIndicators" class="carousel carousel1">
@@ -78,31 +94,46 @@
             </div>
                </form>
         </div>
-        <div class="cards">
-            <div class="card">
-                <img  src="../assets/Maraton3.jpg" class="card-img-top " alt="...">
-                <div class="card-body">
-                    <h5 class="card-title fs-6">10K for life</h5>
-                    <p class="card-text">Come and exercise</p>
-                    <a href="./details.html" class="btn btn-primary">Go somewhere</a>
+        <div class="container py-5">
+            <div class="row justify-content-center flex-wrap gap-4 my-5 flex-grow-1">
+              <div class="card p-0">
+                <img src="../assets/Feriacomida7.jpg" class="card-img-top object-fit-cover w-100" alt="cine img">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Festival of the collectivities</h5>
+                  <p class="card-text">Enjoy your favorite dishes from different countries.
+                    family.</p>
                 </div>
-            </div>
-            <div class="card">
-                <img src="../assets/Salidamuseo5.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title fs-6">Jurassic Park</h5>
-                    <p class="card-text">Let's go to the paleontology museum</p>
-                    <a href="./details.html" class="btn btn-primary">Go somewhere</a>
+                <div class="card-footer d-flex justify-content-between align-items-center">
+                  <h6 class="m-0">Price $5</h6>
+                  <a href="./details.html" class="btn btn-primary">Details</a>
                 </div>
-            </div>
-            <div class="card">
-                <img src="../assets/Fiestdisfraces1.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title fs-6">Halloween Night</h5>
-                    <p class="card-text">Come in your scariest costume</p>
-                    <a href="./details.html" class="btn btn-primary">Go somewhere</a>
+              </div>
+      
+              <div class="card p-0">
+                <img src="../assets/Salidamuseo5.jpg" class="card-img-top object-fit-cover w-100" alt="cine img">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Jurassic Park</h5>
+                  <p class="card-text">Let's go to the paleontology museum for an incredible tour.
+                    dinosaurs.</p>
                 </div>
-            </div>
+                <div class="card-footer d-flex justify-content-between align-items-center">
+                  <h6 class="m-0">Price $15</h6>
+                  <a href="./details.html" class="btn btn-primary">Details</a>
+                </div>
+              </div>
+      
+              <div class="card p-0">
+                <img src="../assets/Fiestdisfraces1.jpg" class="card-img-top object-fit-cover w-100"
+                  alt="cine img">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Halloween Night</h5>
+                  <p class="card-text">Come in your scariest costume character to win amazing prizes.</p>
+                </div>
+                <div class="card-footer d-flex justify-content-between align-items-center">
+                  <h6 class="m-0">Price $12</h6>
+                  <a href="./details.html" class="btn btn-primary">Details</a>
+                </div>
+              </div>
         </div>
     </main>
     <footer class="vh10">

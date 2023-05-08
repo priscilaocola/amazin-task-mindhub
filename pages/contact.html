@@ -12,20 +12,36 @@
     <title>Amazing Events</title>
 </head>
 <body>
-    <nav class="nav">
-        <div>
-            <a href="#">
-                <img class="logo" src="../assets/logo.png" alt="logo">
-            </a>
+    <nav class="navbar navbar-expand-md">
+        <div class="container-fluid d-flex justify-content-between px-4 py-2">
+          <a href="#">
+            <img class="logo" src="../assets/logo.png" alt="logo amazing events">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse flex-grow-0 text-center" id="navbarNav">
+            <ul class="navbar-nav align-items-center gap-3">
+              <li class="nav-item">
+                <a class="nav-link" href="../index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./upcomingEvents.html">Upcoming Events</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./pastEvents.html">Past Events</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./stats.html">Stats</a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="contenedor1">
-            <a class="ancos" href="../index.html" >Home</a>
-            <a class="ancos" href="./upcomingEvents.html" >Upcoming Events</a>
-            <a class="ancos" href="./pastEvents.html">Past Events</a>
-            <a class="ancos" href="#" >Contact</a>
-            <a class="ancos" href="./stats.html">Stats</a>
-        </div>
-    </nav>
+      </nav>
 
     <header class="header">
         <div id="carouselExampleIndicators" class="carousel carousel1">
