@@ -36,7 +36,7 @@ nav{
     background-color: rgba(255, 255, 255, 0.897);
 }
 .nav-link{
-    color:rgb(236, 9, 96);
+    color:rgb(216, 4, 96);
     font-weight: 900;
     margin:0 .1rem  !important;
     transition: all .3s ease;
@@ -65,14 +65,68 @@ nav{
   padding: 1rem;
   background-color: rgb(177, 175, 175);
 }
-.card {
-    width: 15rem !important;
-    height: 20rem;
-    padding: rem;
-    text-align: center;
+.card{
+    width: 18rem !important;
+    border: 0 !important;
+    transition: all .3s ease-in-out;
+}
+.card-img-top{
+    height: 12rem !important;
+}
+.card-footer{
+    border: 0!important;
+}
+
+.object-fit-cover{
     object-fit: cover;
-    font-size: 12px;
-    margin-bottom: 1.5rem;
+}
+
+.card:hover{
+    box-shadow: 12px 12px 2px 1px var(--color--4);
+}
+.card-title{
+    color:#F8F8F8;
+    background-color: rebeccapurple;
+    font-weight: 600;
+}
+.btn{
+    background-color: #F8F8F8 !important;
+    border: 0 !important;
+    color: rebeccapurple;
+    font-weight: 600;
+    transition: all .5s ease-in-out;
+}
+
+.card-past:hover > img {
+    filter: sepia(0%);
+}
+.card-past  .card-title{
+    color:white;
+    background-color: rebeccapurple;
+    font-weight: 600;
+    transition: all .3s ease;
+}
+
+.details-title{
+    background: none;
+    color: rebeccapurple;
+    font-size: 1.8rem;
+}
+.card-past:hover .card-title{
+    background-color: white;
+}
+
+.card-past .btn{
+    color: rebeccapurple;
+}
+
+.card-past:hover .btn{
+    color: var(--color--1);
+}
+
+.btn:hover{
+    background-color: blueviolet !important;
+    color: #F8F8F8 !important;
 }
 .cards{
 border: 1px solid grey;

@@ -176,7 +176,7 @@ const data = {
       capacity: 11000,
       assistance: 9300,
       price: 225,
-      __v: 0,vb 
+      __v: 0,
     },
     {
       _id: "639c723d992482e5f2834c03",
