@@ -103,23 +103,24 @@ min-height: 80vh !important;
  justify-content: space-between;
  height: 10vh !important;
     background-color: rgb(119, 118, 118);
-    color: white;
+    color: rgb(10, 10, 10);
     align-items: center;
 }
 .texto1{
-    font-size: 18px;
+    font-size: 20px;
     margin-left: 1rem;
-    margin-right: 1rem;
+    margin-right: 1.5rem;
 }
 .iconos{
-    width: 11.5rem !important;
+    width: 10rem !important;
     height: 1rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin-left: 1rem;
 }
 .iconoimg{
-    width: 90%;
+    width: 80%;
     background-color: white;
     border-radius: 100%;
     padding: 0.1rem;
