@@ -3,7 +3,7 @@ let upcoming = document.getElementById("upcoming-cards");
 function planoCards(objeto) {
   return `
       <div class="card mt-3 mb-3" style="width: 18rem;">
-      <img src="${objeto.image}" class="card-img-top object-fit-cover w-100" alt="cine img">
+      <img src="${objeto.image}" class="card-img-top object-fit-cover p-3" alt="cine img">
       <div class="card-body text-center">
       <h5 class="card-title">${objeto.name}</h5>
       <p class="card-text">${objeto.description}</p>

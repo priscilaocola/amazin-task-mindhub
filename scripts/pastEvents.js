@@ -1,8 +1,8 @@
 let past = document.getElementById("past-cards");
 
 function planoCards(objeto) {
-    return ` <div class="card mt-3 mb-3" style="width: 18rem;">
-               <img src="${objeto.image}" class="card-img-top object-fit-cover w-100" alt="cine img">
+  return ` <div class="card mt-3 mb-3" style="width: 18rem;">
+               <img src="${objeto.image}" class="card-img-top object-fit-cover p-3" alt="cine img">
                 <div class="card-body text-center">
                   <h5 class="card-title">${objeto.name}</h5>
                   <p class="card-text">${objeto.description}</p>
@@ -13,16 +13,19 @@ function planoCards(objeto) {
                   </div>
                   </div>
                   ` ;
-                }
-const eventosFiltrados = data.events.filter(event=>event.date < data.currentDate);
-
-function printCards(list, lugar){
-  let template = "";
-  for(let temple of list){
-      template += planoCards (temple)
 }
-lugar.innerHTML += template
-} 
-printCards(eventosFiltrados, past )
+const eventosFiltrados = data.events.filter(event => event.date < data.currentDate);
+
+function printCards(list, lugar) {
+  let template = "";
+  for (let temple of list) {
+    template += planoCards(temple)
+  }
+  lugar.innerHTML += template
+}
+printCards(eventosFiltrados, past)
+
+
+
 
 
