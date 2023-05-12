@@ -25,3 +25,5 @@ function printCards(list, lugar){
 lugar.innerHTML  += template
 }  
 printCards(eventosFiltrados, upcoming )
+
+// task3

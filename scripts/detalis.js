@@ -5,7 +5,7 @@ let getId = urlParametro.get("_id");
 let buscadorId = data.events.find((id) => id._id == getId);
 
 if (buscadorId) {
-    contenedor.innerHTML =  `
+  contenedor.innerHTML = `
       <div class="col-12 col-md-6">
         <img src=${buscadorId.image} class="w-100 h-100 object-fit-cover rounded-start" alt="...">
       </div>
@@ -20,12 +20,5 @@ if (buscadorId) {
             <li class="list">Capacity: ${buscadorId.capacity}</li>
             <li class="list">Price: $${buscadorId.price}</li>
           </ul>
-        </div>;`
-  }
-  
-  
-  
-  
-  
-  
-  
+        </div>;`;
+}

@@ -72,9 +72,10 @@ function filtroDoble() {
   let filtroSearch = filtrarSearch(data.events, inputSearch.value);
   let filtroInput = filtrarInput(filtroSearch, checkeados);
   printCard(filtroInput, cards);
-}
+
 let arrayFiltrado = data.events.map((item) => item.category);
 console.log(arrayFiltrado);
 let newArrayFiltrado = [...new Set(arrayFiltrado)];
 
 printCheck(newArrayFiltrado, contenedorCheck);
+}
