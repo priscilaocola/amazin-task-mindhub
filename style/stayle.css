@@ -272,6 +272,28 @@ nav {
   .checkbox{
     flex-direction: column;
   }
+  .input1{
+    margin-left:3rem;
+  }
+  
+.datos {
+  height: 35rem !important;
+  padding: 2rem;
+}
+
+.dato1 {
+  width: 15rem !important;
+  height: 2rem;
+}
+
+.dato2 {
+  width: 15rem;
+  text-align: center;
+}
+#mesage{
+  width: 15rem;
+  height: 4rem;
+}
 }
 
 /* **contact** */
