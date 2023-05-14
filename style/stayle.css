@@ -74,7 +74,6 @@ nav {
 
 .checkbox {
   display: flex;
-
   align-items: center;
   padding: 1rem;
   background-color: rgba(122, 22, 150, 0.583);
@@ -268,6 +267,10 @@ nav {
     margin-left: 0.5rem;
     margin-top: 2rem;
     background-color: rgb(232, 223, 223);
+  
+  }
+  .checkbox{
+    flex-direction: column;
   }
 }
 
