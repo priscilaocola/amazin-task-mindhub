@@ -1,4 +1,7 @@
 let upcoming = document.getElementById("upcoming-cards");
+let contenedorCheck = document.getElementById("contenedorCheck");
+let inputSearch = document.getElementById("inputSearch");
+
 
 function planoCards(objeto) {
   return `
@@ -10,20 +13,86 @@ function planoCards(objeto) {
       </div>
       <div class="card-footer d-flex justify-content-between align-items-center">
       <h6 class="m-0">$${objeto.price}</h6>
-      <a href="../pages/details.html" class="btn btn-primary">Details</a>
+      <a href="../pages/details.html?_id=${objeto._id}" class="btn btn-primary">Details</a>
       </div>
       </div>
   `;
 }
-const eventosFiltrados = data.events.filter(event=>event.date > data.currentDate);
+const eventosFiltrados = data.events.filter(event => event.date > data.currentDate);
 
-function printCards(list, lugar){
+function printCards(list, lugar) {
   let template = "";
-  for(let temple of list){
-      template += planoCards (temple)
+  for (let temple of list) {
+    template += planoCards(temple)
+  }
+  lugar.innerHTML = template
 }
-lugar.innerHTML  += template
-}  
-printCards(eventosFiltrados, upcoming )
+printCards(eventosFiltrados, upcoming)
 
-// task3
+// task3 =====
+
+
+// check dinamicos
+
+
+function mostraCheckbox(data) {
+  return `
+  <div class="form-check d-flex">
+<input class="form-check input" type="checkbox" value="${data}" id="${data}" >
+<label class="form-check-label" for="${data}">${data}</label>
+</div> `
+
+}
+
+function printCheck(data, contenedorCheck) {
+  let template = ""
+  for (let item of data) {
+    template += mostraCheckbox(item)
+  }
+  contenedorCheck.innerHTML = template;
+}
+
+let arrayFiltrado = data.events.map((item) => item.category)
+console.log(arrayFiltrado)
+let newArrayFiltrado = [...new Set(arrayFiltrado)]
+
+printCheck(newArrayFiltrado, contenedorCheck)
+
+
+inputSearch.addEventListener("input", () => {
+
+  filtroDoble()
+});
+
+function filtroSearch(array, valueSearch) {
+  let filtro = array.filter(item => item.name.toLowerCase().includes(valueSearch.toLowerCase().trim()))
+  return filtro
+}
+
+contenedorCheck.addEventListener("input", () => {
+  
+
+  filtroDoble()
+
+})
+
+function filtroInput(eventos, category) {
+  if (category.length == 0) {
+    return eventos
+  }
+  return eventos.filter(item => category.includes(item.category) )
+}
+
+function filtroDoble() {
+ let checkboxcap = Array.from(document.querySelectorAll('input[type="checkbox"]:checked')).map(check => check.value )
+  let filtro = filtroSearch(eventosFiltrados, inputSearch.value)
+  let nuevofiltro = filtroInput(filtro, checkboxcap)
+
+  printCards(nuevofiltro, upcoming)
+}
+
+
+
+
+
+

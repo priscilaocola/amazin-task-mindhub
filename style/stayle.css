@@ -1,341 +1,319 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* **index** */
 /* ----header---- */
 .header {
-    height: 35vh !important;
+  height: 35vh !important;
 }
 
 .carousel1 {
-    height: 100% !important;
+  height: 100% !important;
 }
 
 .carousel1 div {
-    height: 100% !important;
+  height: 100% !important;
 }
 
 .carousel-item img {
-    width: 100% !important;
-    height: 21rem !important;
-    object-fit: cover;
-    object-position: center;
+  width: 100% !important;
+  height: 21rem !important;
+  object-fit: cover;
+  object-position: center;
 }
 
 h1 {
-    background-color: rgba(228, 220, 220, 0.633);
-    font-size: 45px;
+  background-color: rgba(89, 7, 151, 0.39);
+  font-size: 45px;
 }
 
 nav {
-    background-color: rgb(82, 81, 81) !important;
+  background-color: rgba(89, 7, 151) !important;
 }
 
 .logo {
-    width: 8rem !important;
-    padding: 0.3rem;
-    object-fit: cover;
-    border-radius: 12px;
-    background-color: rgba(255, 255, 255, 0.897);
+  width: 8rem !important;
+  padding: 0.3rem;
+  object-fit: cover;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.897);
 }
 
 .nav-link {
-    color: rgb(216, 4, 96);
-    font-weight: 900;
-    margin: 0 0.1rem !important;
-    transition: all 0.3s ease;
-    border-radius: 10px;
-    background-color: white;
+  color: rgb(247, 6, 111);
+  font-weight: 900;
+  margin: 0 0.1rem !important;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+  background-color: white;
 }
 
 .nav-link[href="#"] {
-    background-color: rgb(215, 204, 204) !important;
-    color: #0a0909 !important;
-    box-shadow: 6px 6px 2px 1px var(--color--4);
+  background-color: rgb(154, 114, 184) !important;
+  color: #0b0b0b !important;
+  box-shadow: 5px 5px 3px 2px ;
+  border: 2px solid rgb(255, 249, 249);
 }
 
 .contenedor1 {
-    padding: 1rem;
-    flex-wrap: wrap;
+  padding: 1rem;
+  flex-wrap: wrap;
 }
 
 /* ----main---- */
 .main {
-    min-height: 60vh !important;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(231, 231, 231);
+  min-height: 65vh !important;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 253, 253);
 }
 
 .checkbox {
-    display: flex;
-    align-items: center;
-    padding: 1rem;
-    background-color: rgb(177, 175, 175);
-    border-radius: 10px;
-}
+  display: flex;
 
-.form-check {
-    padding-left: 1rem !important;
-    margin-bottom: none !important;
-    padding: 2px;
-    border-radius: 25px;
+  align-items: center;
+  padding: 1rem;
+  background-color: rgba(122, 22, 150, 0.583);
+  font-size: 18px;
+  font-weight: 700;
+}
+.buscar{
+    display: flex;
+    background-color: rgba(122, 22, 150, 0.583);
+
 }
 
 .card {
-    width: 18rem !important;
-    border: 0 !important;
-    transition: all 0.3s ease-in-out;
+  width: 18rem !important;
+  background-color: rgb(227, 216, 238);
+  border: 1 !important;
+  transition: all 0.3s ease-in-out;
 }
 
 .card-img-top {
-    height: 12rem !important;
+  height: 12rem !important;
 }
 
 .card-footer {
-    border: 0 !important;
+  border: 0 !important;
 }
 
 .object-fit-cover {
-    object-fit: cover;
+  object-fit: cover;
 }
 
 .card:hover {
-    box-shadow: 12px 12px 2px 1px var(--color--4);
+  box-shadow: 12px 12px 2px 1px var(--color--4);
 }
 
 .card-title {
-    color: #f8f8f8;
-    background-color: rebeccapurple;
-    font-weight: 600;
+  color: #f8f8f8;
+  background-color: rebeccapurple;
+  font-weight: 600;
 }
 
 .btn {
-    background-color: #d1cfcf !important;
-    border: 0 !important;
-    color: rebeccapurple;
-    font-weight: 600;
-    transition: all 0.5s ease-in-out;
+  background-color: #d1cfcf !important;
+  border: 0 !important;
+  color: rebeccapurple;
+  font-weight: 600;
+  transition: all 0.5s ease-in-out;
 }
 
 .card-past .card-title {
-    color: rgb(233, 233, 233);
-    background-color: rebeccapurple;
-    font-weight: 600;
+  color: rgb(233, 233, 233);
+  background-color: rebeccapurple;
+  font-weight: 600;
 }
 
 .details-title {
-    background: none;
-    color: rebeccapurple;
-    font-size: 1.8rem;
+  background-color: white;
+  color: rebeccapurple;
+  font-size: 1.8rem;
 }
 
 .card-past:hover .card-title {
-    background-color: rgb(195, 195, 195);
+  background-color: rgb(195, 195, 195);
 }
 
 .card-past .btn {
-    color: rebeccapurple;
+  color: rebeccapurple;
 }
-
 .card-past:hover .btn {
-    color: plum;
+  color: plum;
 }
 
 .btn:hover {
-    background-color: blueviolet !important;
-    color: #f8f8f8 !important;
+  background-color: blueviolet !important;
+  color: #f8f8f8 !important;
 }
 
 .cards {
-    width: 50rem;
-    height: 30rem;
+  display: flex;
+  align-items: center;
 }
-.imagdetalles {
-    height: 25rem !important;
-    width: 30rem !important;
-    padding: 1rem;
-    margin-top: 1rem;
-}
-
 .container {
-    min-height: 80vh !important;
+  min-height: 82vh !important;
 }
 
 .card-titles {
-    margin-top: 3rem !important;
-}
-
-.input {
-    margin-left: 1rem;
+  margin-top: 3rem !important;
 }
 
 .input1 {
-    width: 10rem;
-    margin-left: 1rem;
-}
+  width: 15rem;
+  margin-bottom: 10px;
 
-.label {
-    background-color: rgba(253, 253, 253, 0.801);
-    border: 2px solid black;
-    font-size: 16px;
-    margin-left: 1rem;
-    padding: 1.5px;
 }
 
 /*---- footer ----- */
 .vh10 {
-    display: flex;
-    justify-content: space-between;
-    height: 10vh !important;
-    background-color: rgb(82, 81, 81);
-    color: rgb(252, 242, 242);
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  height: 10vh !important;
+  background-color: rgb(89, 7, 151);
+  color: rgb(252, 242, 242);
+  align-items: center;
 }
 
 .texto1 {
-    font-size: 25px;
-    margin-left: 1rem;
-    margin-right: 1.5rem;
+  font-size: 25px;
+  margin-left: 1rem;
+  margin-right: 1.5rem;
 }
 
 .iconos {
-    width: 10rem !important;
-    height: 1rem;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-left: 1rem;
+  width: 10rem !important;
+  height: 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 1rem;
 }
 
 .iconoimg {
-    width: 80%;
-    background-color: white;
-    border-radius: 100%;
-    padding: 0.1rem;
+  width: 80%;
+  background-color: white;
+  border-radius: 100%;
+  padding: 0.1rem;
 }
 
 .texto2 {
-    width: 3rem;
-    height: 2rem;
+  width: 3rem;
+  height: 2rem;
 }
 
 @media (min-width: 320px) and (max-width: 768px) {
-    .logo {
-        width: 8rem !important;
-        background-color: white;
-    }
+  .logo {
+    width: 8rem !important;
+    background-color: white;
+  }
 
-    .main {
-        flex-direction: column;
-        width: 100%;
-    }
+  .main {
+    flex-direction: column;
+    width: 100%;
+  }
 
-    .vh10 {
-        height: 8rem !important;
-        flex-direction: row !important;
-        justify-content: space-between;
-        align-items: center;
-    }
+  .vh10 {
+    height: 8rem !important;
+    flex-direction: row !important;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-    .input1 {
-        width: 10rem;
-        margin-left: 1rem;
-        margin-top: 1rem;
-    }
+  
 
-    .card {
-        row-gap: 1rem;
-    }
+  .card {
+    row-gap: 1rem;
+  }
 
-    .vh10 {
-        flex-direction: column;
-        font-size: 10px;
-    }
+  .vh10 {
+    flex-direction: column;
+    font-size: 10px;
+  }
 
-    .texto1 {
-        font-size: 15px;
-    }
+  .texto1 {
+    font-size: 15px;
+  }
 
-    .iconos {
-        width: 9rem !important;
-        height: 5rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+  .iconos {
+    width: 9rem !important;
+    height: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .texto2 {
-        width: 2rem;
-        height: 2rem;
-        gap: 0.5rem;
-    }
+  .texto2 {
+    width: 2rem;
+    height: 2rem;
+    gap: 0.5rem;
+  }
 
-    .container {
-        min-height: 82vh !important;
-    }
+  .container {
+    min-height: 82vh !important;
+  }
 
-    .carousel-item img {
-        height: 17rem !important;
-    }
+  .carousel-item img {
+    height: 17rem !important;
+  }
 
-    .bloque1 {
-        width: 20rem;
-        padding: 0.5rem;
-        margin-left: 0.5rem;
-        margin-top: 2rem;
-        background-color: rgb(232, 223, 223);
-    }
+  .bloque1 {
+    width: 20rem;
+    padding: 0.5rem;
+    margin-left: 0.5rem;
+    margin-top: 2rem;
+    background-color: rgb(232, 223, 223);
+  }
 }
 
 /* **contact** */
 .contacto {
-    min-height: 40rem !important;
-    padding: 1rem;
-    display: flex;
-    justify-content: center;
+  min-height: 40rem !important;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
 }
 
 .datos {
-    height: 30rem;
-    padding: 1rem;
+  height: 30rem;
+  padding: 1rem;
 }
 
 .dato1 {
-    width: 25rem;
-    height: 2rem;
+  width: 25rem;
+  height: 2rem;
 }
 
 .dato2 {
-    width: 10rem;
-    text-align: center;
+  width: 10rem;
+  text-align: center;
 }
 
 /* ------- */
 .bloque1 {
-    width: 25rem;
-    height: 30rem;
-    padding: 1rem;
+  width: 25rem;
+  height: 30rem;
+  padding: 1rem;
 
-    margin-top: 2rem;
-    background-color: rgb(232, 223, 223);
+  margin-top: 2rem;
+  background-color: rgb(232, 223, 223);
 }
 
 .contenedor3 {
-    width: 18rem;
-    margin-left: 1rem;
+  width: 18rem;
+  margin-left: 1rem;
 }
 
 th {
-    background-color: rgb(197, 194, 194) !important;
-    color: #0a0909;
+  background-color: rgb(197, 194, 194) !important;
+  color: #0a0909;
 }
 
 .table-bordered {
-    border: 2px solid black;
+  border: 2px solid black;
 }
-
