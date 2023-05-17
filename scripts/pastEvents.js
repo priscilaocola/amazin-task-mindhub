@@ -2,11 +2,24 @@ let past = document.getElementById("past-cards");
 let contenedorCheck = document.getElementById("contenedorCheck");
 let inputSearch = document.getElementById("inputSearch");
 
+let infoDeApi
+
+fetch(`https://mindhub-xj03.onrender.com/api/amazing`)
+  .then((res) => res.json())
+  .then((datos) => {
+    infoDeApi = datos;
+    const eventosFiltrados = infoDeApi.events.filter((event) => event.date < infoDeApi.currentDate);
+    printCards(eventosFiltrados, past)
+    let arrayfiltro = infoDeApi.events.map((item) => item.category);
+    let newArrayFiltrado = [...new Set(arrayfiltro)];
+    printCheck(newArrayFiltrado, contenedorCheck);
+  });
+
 function planoCards(objeto) {
   return ` <div class="card mt-3 mb-3" style="width: 18rem;">
                <img src="${objeto.image}" class="card-img-top object-fit-cover p-3" alt="cine img">
-                <div class="card-body text-center">
-                  <h5 class="card-title">${objeto.name}</h5>
+                <div class="card-body text-center fw-semibold ">
+                  <h5 class="card-title text-center">${objeto.name}</h5>
                   <p class="card-text">${objeto.description}</p>
                 </div>
                 <div class="card-footer d-flex justify-content-between align-items-center">
@@ -16,18 +29,15 @@ function planoCards(objeto) {
                   </div>
                   `;
 }
-const eventosFiltrados = data.events.filter(
-  (event) => event.date < data.currentDate
-);
 
-function printCards(list, lugar) {
+
+function printCards(datos, lugar) {
   let template = "";
-  for (let temple of list) {
+  for (let temple of datos) {
     template += planoCards(temple);
   }
   lugar.innerHTML = template;
 }
-printCards(eventosFiltrados, past);
 
 // task 3 ====
 
@@ -54,7 +64,9 @@ contenedorCheck.addEventListener("change", () => {
 });
 
 function filtroSearch(array, valueSearch) {
-  let filtro = array.filter((item) => item.name.toLowerCase().includes(valueSearch.toLowerCase()));
+  let filtro = array.filter((item) =>
+    item.name.toLowerCase().includes(valueSearch.toLowerCase())
+  );
   return filtro;
 }
 
@@ -63,18 +75,10 @@ function filtroInput(eventos, category) {
     return eventos;
   }
   return eventos.filter((evento) => category.includes(evento.category));
-
 }
-let arrayFiltrado = data.events.map((item) => item.category);
-console.log(arrayFiltrado);
-let newArrayFiltrado = [...new Set(arrayFiltrado)];
-
-printCheck(newArrayFiltrado, contenedorCheck)
-
 function filtroDoble() {
   let checkeados = Array.from(document.querySelectorAll('input[type="checkbox"]:checked')).map((item) => item.value);
-  let filtrobusqueda = filtroSearch(eventosFiltrados, inputSearch.value);
+  let filtrobusqueda = filtroSearch(infoDeApi.events, inputSearch.value);
   let nuevofiltro = filtroInput(filtrobusqueda, checkeados);
-  printCards(nuevofiltro,past);
+  printCards(nuevofiltro, past);
 }
-

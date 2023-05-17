@@ -1,15 +1,21 @@
 const contenedor = document.getElementById("detalle");
-let info = data.events;
+let infoDeApi
+
+
+fetch(`https://mindhub-xj03.onrender.com/api/amazing`)
+  .then(res => res.json())
+  .then(datos => {
+    infoDeApi = datos
 
 let urlParametro = new URLSearchParams(location.search);
 let getId = urlParametro.get("_id");
-let buscadorId = info.find((d) => d._id == getId);
+let buscadorId = infoDeApi.events.find((d) => d._id == getId);
 
 contenedor.innerHTML = `<div class="col-12 col-md-6">
         <img src=${buscadorId.image} class="w-100 h-100 object-fit-cover rounded-start" alt="...">
       </div>
-      <div class="col-12 col-md-6">
-        <div class="card-body d-flex flex-column align-items-center">
+      <div class="col-12 col-md-6 bg-light">
+        <div class="card-body d-flex flex-column align-items-center bg-light fw-bold">
           <h5 class="card-title details-title mb-5"> ${buscadorId.name}</h5>
           <ul>
             <li class="list">Date: ${buscadorId.date}</li>
@@ -17,7 +23,10 @@ contenedor.innerHTML = `<div class="col-12 col-md-6">
             <li class="list">Category:${buscadorId.category}</li>
             <li class="list">Place: ${buscadorId.place}</li>
             <li class="list">Capacity: ${buscadorId.capacity}</li>
-            <li class="list">Price: ${buscadorId.price}</li>7u56u56u56i6rtfnmgyhtfyhtdthgyhhfsrgrdthdthngdyjmggjmhgfjggmfrtjnftjmrtjmhfgjhdthrhrdhdrxdhftghrtjyjtydhnsfrhnrethnrzxdvdg<hswurghVYAFCavgasyxmf
+            <li class="list">Price: ${buscadorId.price}</li>
           </ul>
           </div>
         </div>`;
+      })
+    
+ 

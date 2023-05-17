@@ -1,13 +1,30 @@
 let upcoming = document.getElementById("upcoming-cards");
 let contenedorCheck = document.getElementById("contenedorCheck");
 let inputSearch = document.getElementById("inputSearch");
+let infoDeApi
+
+// fetch
+
+ 
+fetch (`https://mindhub-xj03.onrender.com/api/amazing`)
+.then(res => res.json())
+.then(datos =>{
+ infoDeApi = datos
+ const eventosFiltrados = infoDeApi.events.filter(event => event.date > infoDeApi.currentDate);
+ printCards(eventosFiltrados, upcoming)
+ let arrayfiltro = infoDeApi.events.map(item => item.category)
+ let newArrayFiltrado = [...new Set(arrayfiltro)]
+ printCheck(newArrayFiltrado, contenedorCheck);
+
+})
 
 
+// cards dinamico
 function planoCards(objeto) {
   return `
       <div class="card mt-3 mb-3" style="width: 18rem;">
       <img src="${objeto.image}" class="card-img-top object-fit-cover p-3" alt="cine img">
-      <div class="card-body text-center">
+      <div class="card-body text-center fw-semibold">
       <h5 class="card-title">${objeto.name}</h5>
       <p class="card-text">${objeto.description}</p>
       </div>
@@ -18,7 +35,7 @@ function planoCards(objeto) {
       </div>
   `;
 }
-const eventosFiltrados = data.events.filter(event => event.date > data.currentDate);
+
 
 function printCards(list, lugar) {
   let template = "";
@@ -27,13 +44,9 @@ function printCards(list, lugar) {
   }
   lugar.innerHTML = template
 }
-printCards(eventosFiltrados, upcoming)
 
 // task3 =====
-
-
 // check dinamicos
-
 
 function mostraCheckbox(data) {
   return `
@@ -52,13 +65,6 @@ function printCheck(data, contenedorCheck) {
   contenedorCheck.innerHTML = template;
 }
 
-let arrayFiltrado = data.events.map((item) => item.category)
-console.log(arrayFiltrado)
-let newArrayFiltrado = [...new Set(arrayFiltrado)]
-
-printCheck(newArrayFiltrado, contenedorCheck)
-
-
 inputSearch.addEventListener("input", () => {
 
   filtroDoble()
@@ -71,8 +77,7 @@ function filtroSearch(array, valueSearch) {
 
 contenedorCheck.addEventListener("input", () => {
   
-
-  filtroDoble()
+filtroDoble()
 
 })
 
@@ -85,7 +90,7 @@ function filtroInput(eventos, category) {
 
 function filtroDoble() {
  let checkboxcap = Array.from(document.querySelectorAll('input[type="checkbox"]:checked')).map(check => check.value )
-  let filtro = filtroSearch(eventosFiltrados, inputSearch.value)
+  let filtro = filtroSearch(infoDeApi.events, inputSearch.value)
   let nuevofiltro = filtroInput(filtro, checkboxcap)
 
   printCards(nuevofiltro, upcoming)

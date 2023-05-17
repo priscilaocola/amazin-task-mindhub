@@ -3,12 +3,25 @@
 let cards = document.getElementById("mainCards");
 let contenedorCheck = document.getElementById("contenedorCheck");
 let inputSearch = document.getElementById("inputSearch");
+let infoDeApi
+
+
+fetch (`https://mindhub-xj03.onrender.com/api/amazing`)
+.then(res => res.json())
+.then(datos =>{
+ infoDeApi = datos
+ printCards(infoDeApi.events, cards);
+ let arrayfiltro = infoDeApi.events.map(item => item.category)
+ let newArrayFiltrado = [...new Set(arrayfiltro)]
+ printCheck(newArrayFiltrado, contenedorCheck);
+
+})
 
 function planoCard(obj) {
   return `<div class="card mt-3 mb-3" style="width: 18rem;">
             <img src=${obj.image} class="card-img-top p-3" alt="food fair">
-            <div class="card-body">
-            <h5 class="card-title">${obj.name}</h5>
+            <div class="card-body fw-semibold">
+            <h5 class="card-title text-center">${obj.name}</h5>
             <p class="cardp card-text">${obj.description}</p>
             </div>
             <div class="card-footer d-flex justify-content-between align-items-center">
@@ -17,15 +30,13 @@ function planoCard(obj) {
             </div>
             </div> `;
 }
-function printCards(list, lugar) {
+function printCards(datos, lugar) {
   let template = "";
-  for (let temple of list) {
+  for (let temple of datos) {
     template += planoCard(temple);
-} 
-
-  lugar.innerHTML = template;
+}  
+lugar.innerHTML = template;
 }
-printCards(data.events, cards);
 
 // ==============================
 // task 3
@@ -34,8 +45,8 @@ printCards(data.events, cards);
 
 function mostraCheckbox(data) {
   return `
-  <div class="form-check d-flex">
-<input class="form-check input" type="checkbox" value="${data}" id="${data}" >
+  <div class="form-check d-flex justify-content-center">
+<input class="form-check input justify-content-center" type="checkbox" value="${data}" id="${data}" >
 <label class="form-check-label" for="${data}">${data}</label>
 </div> `;
 }
@@ -47,11 +58,6 @@ function printCheck(data, contenedorCheck) {
   }
   contenedorCheck.innerHTML = template;
 }
-let arrayFiltrado = data.events.map((item) => item.category);
-console.log(arrayFiltrado)
-let newArrayFiltrado = [...new Set(arrayFiltrado)]
-
-printCheck(newArrayFiltrado, contenedorCheck);
 
 inputSearch.addEventListener("input", () => {
   filtroDoble();
@@ -74,7 +80,7 @@ function filtroInput(eventos, category) {
 
 function filtroDoble() {
   let checkeados = Array.from( document.querySelectorAll('input[type="checkbox"]:checked')).map((item) => item.value);
-  let filtrobusqueda = filtroSearch(data.events, inputSearch.value);
+  let filtrobusqueda = filtroSearch(infoDeApi.events, inputSearch.value);
   let nuevofiltro = filtroInput(filtrobusqueda , checkeados);
   printCards(nuevofiltro, cards);
 }

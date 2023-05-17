@@ -65,47 +65,81 @@
     </header>
     <main class="main">
         <div class="container py-5">
-            <div class="row  justify-content-center flex-grow-1">
-                <table class="table table-bordered mb-5">
+            <div class="row  justify-content-center flex-grow-1 ">
+                <table class="table m-5"  id="tablaEventos">
                     <thead>
                         <tr>
-                            <th colspan="3">Events Statistics</th>
+                            <th colspan="3" class="text-center fs-3">Events Statistics</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Events with the highest percentage of attendance</td>
-                            <td>Events with the lowest percentage of attendance</td>
-                            <td>Events with larger capacity</td>
+                        <tr class="fw-semibold bg-light table-bordered border-primary text-center">
+                            <td class="fw-bold">Events with the highest percentage of attendance</td>
+                            <td class="fw-bold">Events with the lowest percentage of attendance</td>
+                            <td class="fw-bold">Events with larger capacity</td>
                         </tr>
+                        <!-- <tr class="fw-semibold bg-light table-bordered border-primary text-center">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr> -->
+            
                     </tbody>
                 </table>
-                <table class="table table-bordered mb-5">
+                <table class="table mb-5" id="tablaFuture">
                     <thead>
                         <tr>
-                            <th colspan="3">Upcoming Events statistics by category</th>
+                            <th colspan="3" class="tbltitle text-center fs-3">Upcoming Events statistics by category</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td>Categories</td>
-                            <td>Revenues</td>
-                            <td>Percentage of attendance</td>
-                        </tr>
+                    <tbody >
+                         <tr  class="fw-semibold bg-primary text-center table-bordered border-primary ">
+                            
+                            <td class="fw-bold" >Categories</td>
+                            <td class="fw-bold">Revenues</td>
+                            <td class="fw-bold text-bl">Percentage of attendance</td>
+                        </tr> 
+                        <!-- <tr class="fw-semibold bg-light table-bordered border-primary text-center">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr> -->
+                        <!-- <tr class="fw-semibold bg-light table-bordered border-primary text-center">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr> 
+                         -->
                     </tbody>
                 </table>
-                <table class="table table-bordered mb-5">
+                <table class="table  mb-5 " id="tablaPasado">
                     <thead>
                         <tr>
-                            <th colspan="3">Past Events statistics by category</th>
+                            <th colspan="3" class="text-center fs-3">Past Events statistics by category</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td>Categories</td>
-                            <td>Revenues</td>
-                            <td>Percentage of attendance</td>
+                    <tbody >
+                         <tr class="fw-semibold bg-light mb-5 table-bordered border-primary text-center" >
+                            <td class="fw-bold">Categories</td>
+                            <td class="fw-bold">Revenues</td>
+                            <td class="fw-bold">Percentage of attendance</td>
+                        </tr> 
+                        <tr class="fw-semibold bg-light mb-5 table-bordered border-primary text-center">
+                            <td></td>
+                            <td></td>
+                            <td></td>
                         </tr>
+                        <!-- <tr class="fw-semibold bg-light table-bordered border-primary text-center">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class="fw-semibold bg-light mb-5 table-bordered border-primary text-center">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr> -->
+                      
                     </tbody>
                 </table>
             </div>
@@ -124,5 +158,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
+        <script src="../scripts/stats.js"></script>
 </body>
 </html>
