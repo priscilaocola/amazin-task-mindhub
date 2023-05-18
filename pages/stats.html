@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,37 +12,38 @@
 
     <title>Amazing Events</title>
 </head>
+
 <body>
     <nav class="navbar navbar-expand-md">
         <div class="container-fluid d-flex justify-content-between px-4 py-2">
-          <a href="#">
-            <img class="logo" src="../assets/logo.png" alt="logo amazing events">
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse flex-grow-0 text-center" id="navbarNav">
-            <ul class="navbar-nav align-items-center gap-3">
-              <li class="nav-item">
-                <a class="nav-link" href="../index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./upcomingEvents.html">Upcoming Events</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./pastEvents.html">Past Events</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./contact.html">Contact</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Stats</a>
-              </li>
-            </ul>
-          </div>
+            <a href="#">
+                <img class="logo" src="../assets/logo.png" alt="logo amazing events">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse flex-grow-0 text-center" id="navbarNav">
+                <ul class="navbar-nav align-items-center gap-3">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./upcomingEvents.html">Upcoming Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./pastEvents.html">Past Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Stats</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </nav>
+    </nav>
 
     <header class="header">
         <div id="carouselExampleIndicators" class="carousel carousel1">
@@ -49,7 +51,7 @@
                 <h1 class="text-white position-absolute top-50 start-50 translate-middle z-1 p-3 rounded">Stats</h1>
                 <div class="carousel-item active">
                     <img src="../assets/pexels-fu-zhichao-587741.jpg" class="d-block w-100" alt="banner1">
-                </div>   
+                </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
                 data-bs-slide="prev">
@@ -64,100 +66,39 @@
         </div>
     </header>
     <main class="main">
-        <div class="container py-5">
-            <div class="row  justify-content-center flex-grow-1 ">
-                <table class="table m-5"  id="tablaEventos">
-                    <thead>
-                        <tr>
-                            <th colspan="3" class="text-center fs-3">Events Statistics</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="fw-semibold bg-light table-bordered border-primary text-center">
-                            <td class="fw-bold">Events with the highest percentage of attendance</td>
-                            <td class="fw-bold">Events with the lowest percentage of attendance</td>
-                            <td class="fw-bold">Events with larger capacity</td>
-                        </tr>
-                        <!-- <tr class="fw-semibold bg-light table-bordered border-primary text-center">
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr> -->
-            
-                    </tbody>
-                </table>
-                <table class="table mb-5" id="tablaFuture">
-                    <thead>
-                        <tr>
-                            <th colspan="3" class="tbltitle text-center fs-3">Upcoming Events statistics by category</th>
-                        </tr>
-                    </thead>
-                    <tbody >
-                         <tr  class="fw-semibold bg-primary text-center table-bordered border-primary ">
-                            
-                            <td class="fw-bold" >Categories</td>
-                            <td class="fw-bold">Revenues</td>
-                            <td class="fw-bold text-bl">Percentage of attendance</td>
-                        </tr> 
-                        <!-- <tr class="fw-semibold bg-light table-bordered border-primary text-center">
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr> -->
-                        <!-- <tr class="fw-semibold bg-light table-bordered border-primary text-center">
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr> 
-                         -->
-                    </tbody>
-                </table>
-                <table class="table  mb-5 " id="tablaPasado">
-                    <thead>
-                        <tr>
-                            <th colspan="3" class="text-center fs-3">Past Events statistics by category</th>
-                        </tr>
-                    </thead>
-                    <tbody >
-                         <tr class="fw-semibold bg-light mb-5 table-bordered border-primary text-center" >
-                            <td class="fw-bold">Categories</td>
-                            <td class="fw-bold">Revenues</td>
-                            <td class="fw-bold">Percentage of attendance</td>
-                        </tr> 
-                        <tr class="fw-semibold bg-light mb-5 table-bordered border-primary text-center">
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <!-- <tr class="fw-semibold bg-light table-bordered border-primary text-center">
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr class="fw-semibold bg-light mb-5 table-bordered border-primary text-center">
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr> -->
-                      
-                    </tbody>
-                </table>
-            </div>
-        </div>    
+        <section id="tablaEventos" class="tables p-5 d-flex flex-column  align-items-center">
+
+        </section>
+        <!-- <div class="tables p-5 d-flex flex-column justify-content-center align-items-center">
+            <table class="tabla1">
+                <caption colspan="3" class="event1 text-center caption-top">Event statistics</caption>
+                <thead>
+                  <tr>
+                    <th>Events with the highest percentage of attendance</th>
+                    <th>Events with the lowest percentage of attendance</th>
+                    <th>Event with larger capacity</th>
+                  </tr>
+                </thead>
+    
+            </table>
+                  -->
     </main>
     <footer class="vh10">
         <div class="iconos">
-            <a class="texto2" href="https://www.facebook.com/"> <img class="iconoimg" src="../assets/facebook.svg" alt=""></a>
-            <a class="texto2" href="https://www.instagram.com/"> <img class="iconoimg" src="../assets/instagram.svg" alt=""></a>
+            <a class="texto2" href="https://www.facebook.com/"> <img class="iconoimg" src="../assets/facebook.svg"
+                    alt=""></a>
+            <a class="texto2" href="https://www.instagram.com/"> <img class="iconoimg" src="../assets/instagram.svg"
+                    alt=""></a>
             <a class="texto2" href="tel:541196458736"> <img class="iconoimg" src="../assets/whatsapp.svg" alt=""></a>
         </div>
-            
+
         <p class="texto1">&copy; 2023 Developed by Priscila .E Ocola</p>
         <h6 class="texto1">Cohort 47</h6>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
-        <script src="../scripts/stats.js"></script>
+    <script src="../scripts/stats.js"></script>
 </body>
+
 </html>

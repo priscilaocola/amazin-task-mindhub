@@ -338,14 +338,33 @@ nav {
 }
 
 th {
-  background-color: rgb(174, 39, 86) !important;
-  color: #fff6f6;
+ color: #111111;
+ background-color: #8072cf;
+ padding: 1rem;
+ font-weight: bolder;
+ text-align: center;
+ border-width: 8px !important;
+ border-color: rgb(242, 229, 245);
+
 }
 
-.table-bordered {
-  border: 3px solid black;
+caption{
+  background-color: #7c159b;
+  font-size: 18px;
+  color: white;
+border: #0b0b0b;
+margin: 0.5rem;
 }
-.row{
-  background-color: rgb(174, 39, 86) !important;
-  padding: 2rem; 
-} 
+tbody{
+background-color:white ;
+}
+
+td{
+  text-align: center;
+  font-size: 17px;
+
+   border-width: 8px !important; 
+   border-color: rgb(233, 133, 183);
+   height: 3em;
+}
+
