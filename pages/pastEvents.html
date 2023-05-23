@@ -71,11 +71,11 @@
       </button>
     </div>
   </header>
-  <main class="main">
+  <main class="main" id="app">
     <div class="checkbox" id="contenedorCheck">
-      <div class="form-check d-flex">
-        <input class="input" type="checkbox" value="accept">
-        <label class="label">Food Fair </label>
+      <div class="form-check d-flex justify-content-center" v-for="categoria of categorias">
+        <input v-bind:id="categoria" class="input" type="checkbox" v-model="chequeados" v-bind:value="categoria">
+        <label v-bind:for="categoria" class="label">{{categoria}}</label>
       </div>
       <!-- 
         <div class="form-check form-switch">
@@ -110,19 +110,36 @@
 
     </div>
     <div class="buscar justify-content-center">
-  
-      <input class="input1" type="search" name="search" id="inputSearch" placeholder="🔍︎">
+      <input class="input1" type="search" name="search" id="inputSearch" v-model="inputSearch" placeholder="🔍︎">
     </div>
     </div>
-    <div class="container py-5">
-      <div id="past-cards" class="row justify-content-center flex-wrap gap-4 my-5 flex-grow-1">
+    {{filtro}}
+
+    <div class="container py-5 d-flex flex-wrap">
+      <div id="past-cards" class="row justify-content-center gap-4 col-lg-4 my-5 flex-grow-1">
+        <div  v-for="evento of eventosFiltrados"  class="card mt-2 mb-3" style="width: 18rem;">
+          <img v-bind:src="evento.image" class="card-img-top object-fit-cover p-3" alt="cine img">
+          <div class="card-body text-center fw-semibold">
+            <h5 class="card-title">{{evento.name}}</h5>
+            <p class="card-text">{{evento.description}}</p>
+          </div>
+          <div class="card-footer d-flex justify-content-between align-items-center">
+            <h6 class="m-0">{{evento.price}} USD</h6>
+            <a v-bind:href="`./details.html?_id=${evento._id}`"class="btn btn-primary">Details</a>
+          </div>
+        </div>
       </div>
     </div>
+    <div v-else class="d-flex flex-wrap justify-content-center align-items-center gap-5 mt-5 mb-5">
+      <p id="msgError">Try again</p>
+  </div>
+
   </main>
   <footer class="vh10">
     <div class="iconos">
       <a class="texto2" href="https://www.facebook.com/"> <img class="iconoimg" src="../assets/facebook.svg" alt=""></a>
-      <a class="texto2" href="https://www.instagram.com/"><img class="iconoimg"src="../assets/instagram.svg"alt=""></a>
+      <a class="texto2" href="https://www.instagram.com/"><img class="iconoimg" src="../assets/instagram.svg"
+          alt=""></a>
       <a class="texto2" href="tel:541196458736"> <img class="iconoimg" src="../assets/whatsapp.svg" alt=""></a>
     </div>
 
@@ -132,6 +149,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
     crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   <script src="../scripts/pastEvents.js"></script>
 
 

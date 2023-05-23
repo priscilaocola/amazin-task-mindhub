@@ -31,8 +31,8 @@ h1 {
 }
 
 nav {
- background-color: rgb(110, 3, 110) !important;
- border: 1px solid rgb(0, 0, 0);
+  background-color: rgb(110, 3, 110) !important;
+  border: 1px solid rgb(0, 0, 0);
 }
 
 .logo {
@@ -60,7 +60,7 @@ nav {
 .nav-link[href="#"] {
   background-color: rgb(154, 114, 184) !important;
   color: #0b0b0b !important;
-  box-shadow: 5px 5px 3px 2px ;
+  box-shadow: 5px 5px 3px 2px;
   border: 2px solid rgb(255, 249, 249);
 }
 
@@ -73,8 +73,6 @@ nav {
 .main {
   min-height: 65vh !important;
   width: 100%;
-  display: flex;
-  flex-direction: column;
   background: linear-gradient(to bottom right, #abaad1, #9c0db9);
 }
 
@@ -82,23 +80,23 @@ nav {
   display: flex;
   align-items: center;
   padding: 1rem;
-  background-color:linear-gradient(to bottom right, #9921c8, #b809db);
+  background-color: linear-gradient(to bottom right, #9921c8, #b809db);
   font-size: 18px;
   font-weight: 700;
 }
-.buscar{
-    display: flex;
-    background-color: rgba(122, 22, 150, 0.583);
+
+.buscar {
+  display: flex;
+  background-color: rgba(122, 22, 150, 0.583);
 
 }
 
 .card {
-  width: 18rem !important;
+  width: 17rem !important;
   background-color: rgb(227, 216, 238);
   border: 1 !important;
-  transition: all 0.3s ease-in-out;
-}
 
+}
 .card-img-top {
   height: 12rem !important;
 }
@@ -148,6 +146,7 @@ nav {
 .card-past .btn {
   color: rebeccapurple;
 }
+
 .card-past:hover .btn {
   color: plum;
 }
@@ -159,8 +158,9 @@ nav {
 
 .cards {
   display: flex;
-  align-items: center;
+  justify-content: center;
 }
+
 .container {
   min-height: 82vh !important;
 }
@@ -234,6 +234,7 @@ nav {
     flex-direction: column;
     font-size: 10px;
   }
+
   .card {
     row-gap: 1rem;
   }
@@ -270,33 +271,36 @@ nav {
     margin-left: 0.5rem;
     margin-top: 2rem;
     background-color: rgb(232, 223, 223);
-  
+
   }
-  .checkbox{
+
+  .checkbox {
     flex-direction: column;
   }
-  .input1{
-    margin-left:3rem;
+
+  .input1 {
+    margin-left: 3rem;
   }
-  
-.datos {
-  height: 35rem !important;
-  padding: 2rem;
-}
 
-.dato1 {
-  width: 15rem !important;
-  height: 2rem;
-}
+  .datos {
+    height: 35rem !important;
+    padding: 2rem;
+  }
 
-.dato2 {
-  width: 15rem;
-  text-align: center;
-}
-#mesage{
-  width: 15rem;
-  height: 4rem;
-}
+  .dato1 {
+    width: 15rem !important;
+    height: 2rem;
+  }
+
+  .dato2 {
+    width: 15rem;
+    text-align: center;
+  }
+
+  #mesage {
+    width: 15rem;
+    height: 4rem;
+  }
 }
 
 /* **contact** */
@@ -338,33 +342,33 @@ nav {
 }
 
 th {
- color: #111111;
- background-color: #8072cf;
- padding: 1rem;
- font-weight: bolder;
- text-align: center;
- border-width: 8px !important;
- border-color: rgb(242, 229, 245);
+  color: #111111;
+  background-color: #8272da;
+  padding: 1rem;
+  font-weight: bolder;
+  text-align: center;
+  border-width: 8px !important;
+  border-color: rgb(242, 229, 245);
 
 }
 
-caption{
-  background-color: #7c159b;
+caption {
+  background-color: #791399;
   font-size: 18px;
   color: white;
-border: #0b0b0b;
-margin: 0.5rem;
-}
-tbody{
-background-color:white ;
+  border: #0b0b0b;
+  margin: 0.5rem;
 }
 
-td{
+tbody {
+  background-color: white;
+}
+
+td {
   text-align: center;
   font-size: 17px;
 
-   border-width: 8px !important; 
-   border-color: rgb(233, 133, 183);
-   height: 3em;
+  border-width: 8px !important;
+  border-color: rgb(234, 84, 159);
+  height: 3em;
 }
-
